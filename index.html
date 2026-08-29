@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OnePercent — Become 1% Better Every Day</title>
+<meta name="description" content="A personal daily progress tracker. Build habits, track goals, and become 1% better every day." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark">1%</span>
+      <span class="brand-name">OnePercent</span>
+    </div>
+    <nav class="sidebar-nav" id="sidebar-nav"></nav>
+    <button class="sidebar-profile" data-route="settings" onclick="navigateTo('settings')">
+      <span class="avatar-dot"></span>
+      <span class="sidebar-profile-text">
+        <span id="sidebar-profile-name">Set up your profile</span>
+        <span id="sidebar-profile-focus" class="muted small"></span>
+      </span>
+    </button>
+  </aside>
+
+  <header class="topbar">
+    <div class="sidebar-brand mobile-only">
+      <span class="brand-mark">1%</span>
+      <span class="brand-name">OnePercent</span>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav"></nav>
+
+  <main class="view-root" id="view-root"></main>
+
+</div>
+
+<script src="js/storage.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/goals.js"></script>
+<script src="js/habits.js"></script>
+<script src="js/today.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/statistics.js"></script>
+<script src="js/journal.js"></script>
+<script src="js/achievements.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* ============================================================
+   OnePercent — responsive.css
+   ============================================================ */
+
+@media (max-width: 1080px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .journal-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .app-shell { grid-template-columns: 1fr; }
+  .sidebar { display: none; }
+  .mobile-only { display: flex; }
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; top: 0; z-index: 40;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 18px;
+  }
+
+  .menu-toggle {
+    background: none; border: none;
+    width: 34px; height: 34px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  }
+  .menu-toggle span { display: block; width: 20px; height: 2px; background: var(--ink); border-radius: 2px; }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 6px 10px 14px;
+    position: sticky; top: 58px; z-index: 39;
+  }
+  .mobile-nav.open { display: flex; }
+  .nav-link-mobile {
+    padding: 11px 12px;
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .nav-link-mobile.active { background: var(--accent-soft); color: var(--accent); }
+
+  .view-root { padding: 22px 18px 60px; }
+
+  .grid-2, .grid-3, .grid-4, .journal-grid { grid-template-columns: 1fr; }
+  .field-row { grid-template-columns: 1fr; }
+  .progress-row { flex-direction: column; align-items: flex-start; }
+  .toast-host { left: 16px; right: 16px; bottom: 16px; }
+  .toast { text-align: center; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.4rem; }
+  .card { padding: 16px; }
+  .page-header { flex-direction: column; align-items: stretch; }
+  .page-header .btn { align-self: flex-start; }
+  .cal-legend { flex-direction: column; gap: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
